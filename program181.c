@@ -1,0 +1,31 @@
+//input : India
+//output : INDIA
+
+#include<stdio.h>
+
+void struprX(char *str)
+{
+
+    while(*str != '\0')
+    {
+        if((*str >= 'a') && (*str <= 'z'))
+        {
+            *str = *str - 32; //address arithematic
+        }
+        str++;
+    }
+}
+
+int main()
+{
+    char Arr[50] = {'\0'};
+
+    printf("Enter String :\n");
+    scanf("%[^'\n']s", Arr);
+
+    struprX(Arr);
+
+    printf("Updated string : %s\n",Arr);
+
+    return 0;
+}
